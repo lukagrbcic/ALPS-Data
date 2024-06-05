@@ -15,7 +15,7 @@ ss_data -- Stainless steel data
 
 inconel_data -- Inconel data
 
-Both datasets are split into train and test data.
+Both datasets have been shuffled split into train and test data.
 
 _______
 
