@@ -38,5 +38,27 @@ _________
 
 **benchmarks_functions.py** - Python code that contains the benchmark target and functions classes.
 
+Test example **test_function.py** explained below:
+
+```python
+
+import numpy as np
+import sys
+
+sys.path.insert(0, '../benchmarks')
+
+#load the benchmark functions module
+import benchmarks_functions as bf
 
 
+benchmark = 'logistic_growth' #select the benchmark by name
+
+target = bf.targets(benchmark).get_target() #get target array of the benchmark
+
+f_ = bf.function(benchmark, target) #define the function object
+lb, ub = f_.get_bounds() #get lower and upper bounds (arrays) of the benchmark
+
+#define the objective function that returns a single value
+def f(x): 
+    return f_.evaluate(x) #use the evaluate method that takes in the design vector
+```
