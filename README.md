@@ -53,7 +53,7 @@ import benchmarks_functions as bf
 
 benchmark = 'logistic_growth' #select the benchmark by name
 
-target = bf.targets(benchmark).get_target() #get target array of the benchmark
+target = bf.targets(benchmark).get_target() #get target array of the benchmark if necessary
 
 f_ = bf.function(benchmark, target) #define the function object
 lb, ub = f_.get_bounds() #get lower and upper bounds (arrays) of the benchmark
